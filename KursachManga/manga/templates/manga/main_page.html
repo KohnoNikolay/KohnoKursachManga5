@@ -1,0 +1,16 @@
+{% extends 'manga/base.html' %}
+
+{% block Title %}
+Главная страница
+{% endblock %}
+
+{% block Body %}
+<div>
+    Список тайтлов
+    {% for element in post %}
+    <p><a href="#"><img class="img-article-left thumb" src="{{ element.poster.url }}" height="400"
+                                            width=default></a></p>
+    <p><a href="#">src? {{ element.name }}</a></p>
+    {% endfor %}
+</div>
+{% endblock %}

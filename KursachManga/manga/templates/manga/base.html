@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block Title %}{% endblock %}</title>
+</head>
+<style>
+   body {
+    margin-right: 25%; /* Отступ справа */
+    margin-left: 25%; /* Отступ слева */
+   }
+
+</style>
+<body>
+    <div align="center">
+        <a href="{% url 'home' %}">Главная страница</a>
+        <a href="{% url 'title_add_page' %}">Страница добавления манги</a>
+        <a href="{% url 'view_manga_page' %}">Страница просмотра манги</a>
+        <a href="{% url 'view_manga_title_page' %}">Страница просмотра визитки манги</a>
+    </div>
+    {% block Body %}{% endblock %}
+</body>
+</html>
