@@ -26,7 +26,6 @@ class Titles(models.Model):
     author = models.CharField(max_length=120,)
     publisher = models.CharField(max_length=120,)
     translator = models.CharField(max_length=120,)
-    chapters = models.ForeignKey(Chapters, on_delete=models.CASCADE, )
     slug = models.SlugField(max_length=120, unique=True, )
 
     def __str__(self):

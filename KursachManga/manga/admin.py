@@ -3,7 +3,7 @@ from .models import *
 
 
 class TitlesAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'author', 'slug', 'poster', 'chapters')
+    list_display = ('id', 'name', 'author', 'slug', 'poster')
     list_display_links = ('id', 'name', )
     search_fields = ('name', 'author', )
     prepopulated_fields = {"slug": ("name", )}
