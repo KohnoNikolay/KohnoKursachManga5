@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block Body %}
-<form action="{% url 'title_add_page' %}" method="post">
+<form action="{% url 'title_add_page' %}" method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Добавить</button>

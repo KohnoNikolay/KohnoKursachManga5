@@ -13,12 +13,11 @@ def home_page(request):
 
 def title_add_page(request):
     if request.method == 'POST':
-        form = AddTitlesForm(request.POST)
+        form = AddTitlesForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return redirect('home')
     else:
-        print("dddd")
         form = AddTitlesForm()
     return render(request, 'manga/add_title_page.html', {'form': form, 'posts': posts})
 
